@@ -1,3 +1,433 @@
-body{
-    background-color: red;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.appointment-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  font-family: 'Inter', sans-serif;
+  color: #1b304b;
+}
+
+.appointment-header {
+  height: 55px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.5%;
+}
+
+.appointment-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.appointment-header span {
+  font-size: 9px;
+  font-weight: 600;
+  color: #718096;
+}
+
+.appointment-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 4.5% 30px;
+}
+
+.intro-section {
+  margin-bottom: 10px;
+}
+
+.section-label {
+  color: #d30b38;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.intro-section h1 {
+  font-size: 27px;
+  margin: 9px 0 5px;
+  font-weight: 700;
+}
+
+.intro-section p,
+.visitor-section > p {
+  font-size: 14px;
+  color: #718096;
+}
+
+.visitor-section {
+  margin-bottom: 14px;
+}
+
+.visitor-section h3 {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.visitor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px 12px;
+  margin-top: 12px;
+}
+
+.visitor-card {
+  min-height: 65px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid #dce4ee;
+  border-radius: 9px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.visitor-card:hover {
+  border-color: #d30b38;
+}
+
+.visitor-card.selected {
+  border: 1.5px solid #d30b38;
+  background: #fff8fa;
+}
+
+.visitor-card h4 {
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.visitor-card p {
+  font-size: 11px;
+  color: #718096;
+}
+
+.radio-circle {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #b7c5d6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected .radio-circle {
+  border-color: #d30b38;
+}
+
+.radio-inner {
+  width: 7px;
+  height: 7px;
+  background: #d30b38;
+  border-radius: 50%;
+}
+
+.helper-text {
+  display: block;
+  font-size: 10px;
+  color: #718096;
+  margin-top: 9px;
+}
+
+.appointment-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  align-items: start;
+  margin-top: 14px;
+}
+
+.form-left {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.form-card {
+  background: #fff;
+  border: 1px solid #dce4ee;
+  border-radius: 9px;
+  padding: 15px;
+}
+
+.form-card h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.form-group label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #263a53;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  min-height: 36px;
+  border: 1px solid #dce4ee;
+  border-radius: 5px;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 11px;
+  color: #263a53;
+  background: #fff;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #d30b38;
+}
+
+.form-group textarea {
+  min-height: 36px;
+  resize: vertical;
+}
+
+.contact-card {
+  margin-top: 0;
+}
+
+.contact-card .full-width {
+  margin-bottom: 12px;
+}
+
+.required-note {
+  font-size: 10px;
+  color: #718096;
+  display: block;
+  margin-top: -20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.summary-card {
+  background: #192e49;
+  color: #fff;
+  border-radius: 9px;
+  padding: 16px;
+}
+
+.summary-card h3,
+.visit-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.summary-card > p {
+  color: #bdc9d8;
+  font-size: 10px;
+  margin-bottom: 18px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 10px;
+  margin-bottom: 13px;
+}
+
+.summary-item span {
+  color: #c2cddd;
+}
+
+.summary-item strong {
+  text-align: right;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.visit-card {
+  background: #eaf3ef;
+  border-radius: 9px;
+  padding: 16px;
+}
+
+.visit-card h3 {
+  margin-bottom: 17px;
+}
+
+.visit-tip {
+  margin-bottom: 18px;
+}
+
+.visit-tip:last-child {
+  margin-bottom: 0;
+}
+
+.visit-tip h4 {
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.visit-tip p {
+  color: #718096;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.information-notice {
+  margin-top: 12px;
+  background: #e9eff7;
+  color: #718096;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.form-footer p {
+  color: #718096;
+  font-size: 10px;
+}
+
+.review-button,
+.close-button {
+  border: none;
+  background: #d30b38;
+  color: #fff;
+  border-radius: 6px;
+  padding: 12px 25px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.review-button:hover,
+.close-button:hover {
+  background: #ae082d;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 30, 50, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.review-modal {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.review-modal h2 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.review-modal > p {
+  color: #718096;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.review-details {
+  background: #f4f7fb;
+  padding: 15px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+.review-details p {
+  font-size: 12px;
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+}
+
+.review-details p:last-child {
+  margin-bottom: 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .appointment-container {
+    padding: 20px;
+  }
+
+  .appointment-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .form-left {
+    gap: 15px;
+  }
+
+  .required-note {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .visitor-grid,
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-section h1 {
+    font-size: 23px;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .review-button {
+    width: 100%;
+  }
+
+  .appointment-header {
+    padding: 0 20px;
+  }
 }
