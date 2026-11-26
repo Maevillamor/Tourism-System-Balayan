@@ -1,0 +1,6 @@
+node_modules/
+.env
+dist/
+*.backup.*
+/Tourism System Balayan/
+.DS_Store
